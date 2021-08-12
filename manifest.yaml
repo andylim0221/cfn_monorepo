@@ -1,0 +1,12 @@
+# example
+Stacks: 
+  - StackName: # stack name 
+    LambdaFiles: # lambda code file if neccessary
+    TemplateFile: # template file
+    Parameters: # parameters file 
+    Region: # region, default us-east-1
+    Capabilities: # capabilities 
+      - CAPABILITY_IAM 
+    Tags: #tags  
+      - 
+    Delete: True # delete if this flag exists and set true 
