@@ -19,7 +19,8 @@ steps:
 - script: gem install cfn-nag
   displayName: 'Install cfn_nag'
 
-- script:
+- script: |
+    shopt -s globstar
     cfn-lint -t $(Build.SourcesDirectory)/templates/*.yaml
   displayName: 'Run cfn-lint check'
 
