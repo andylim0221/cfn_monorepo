@@ -11,9 +11,6 @@ steps:
 - script: pip install -r requirements.txt
   displayName: 'Install dependencies'
 
-- script: cfn-lint templates/**/*.yaml
-  displayName: 'Run cfn-lint check'
-
 - task: UseRubyVersion@0
   inputs:
     versionSpec: '>= 2.5'
@@ -21,6 +18,9 @@ steps:
 
 - script: gem install cfn-nag
   displayName: 'Install cfn_nag'
+
+- script: cfn-lint $(Build.SourcesDirectory)/templates/*.yaml
+  displayName: 'Run cfn-lint check'
 
 - script: cfn_nag_scan --input-path templates 
   displayName: 'Run cfn_nag on the templates'
