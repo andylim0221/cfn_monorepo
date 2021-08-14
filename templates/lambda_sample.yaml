@@ -60,7 +60,7 @@ Resources:
       FunctionName:
         Fn::Sub: lambda-function-${EnvName}
       Description: LambdaFunctioni of nodejs10.x.
-      Runtime: nodejs10.x
+      Runtime: nodejs14.x
       Code:
         ZipFile: !Base64 | 
           "exports.handler = function(event, context){\n
