@@ -62,10 +62,10 @@ Resources:
       Description: LambdaFunctioni of nodejs10.x.
       Runtime: nodejs10.x
       Code:
-        ZipFile:
+        ZipFile: !Base64 | 
           "exports.handler = function(event, context){\n
             var sample = sample;"
-      Handler: ${LambdaHandlerPath}
+      Handler: !Ref LambdaHandlerPath
       MemorySize: 128
       Timeout: 10
       Role:
