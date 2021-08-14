@@ -19,10 +19,10 @@ steps:
 - script: gem install cfn-nag
   displayName: 'Install cfn_nag'
 
+- script: cfn_nag_scan --input-path templates 
+  displayName: 'Run cfn_nag on the templates'
+
 - script: |
     shopt -s globstar
     cfn-lint -t $(Build.SourcesDirectory)/templates/*.yaml
   displayName: 'Run cfn-lint check'
-
-- script: cfn_nag_scan --input-path templates 
-  displayName: 'Run cfn_nag on the templates'
