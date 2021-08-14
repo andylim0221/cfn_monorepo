@@ -8,7 +8,7 @@ steps:
 - task: UsePythonVersion@0 
   displayName: 'Use python'
 
-- script: pip install -r requirements.txxt
+- script: pip install -r requirements.txt
   displayName: 'Install dependencies'
 
 - script: python index.py
