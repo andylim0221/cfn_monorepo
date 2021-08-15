@@ -23,6 +23,7 @@ steps:
   displayName: 'Run cfn_nag on the templates'
 
 - script: |
+    shopt globstar
     echo "Enabling globstar"
     shopt -s globstar
     echo "Enabled"
