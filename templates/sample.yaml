@@ -29,6 +29,11 @@ Parameters:
 Resources:
   Cluster:
     Type: AWS::RDS::DBCluster
+    Metadata:
+    cfn_nag:
+      rules_to_suppress:
+        - id: F26
+          reason: Strong encryption is not required
     Properties:
       Engine: aurora
       EngineMode: serverless
