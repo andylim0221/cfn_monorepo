@@ -13,7 +13,7 @@ class CloudFormationStack:
         self.template_file = json["TemplateFile"]
         self.parameters = json["Parameters"]
         self.capabilties = json["Capabilities"]
-        self.tags = json["Tag"] if json["Tag"] else []
+        self.tags = json["Tags"] if json["Tags"] else []
 
     def deploy(self):
         try:

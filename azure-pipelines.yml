@@ -22,10 +22,7 @@ steps:
 - script: cfn_nag_scan --input-path $(Build.SourcesDirectory)/templates 
   displayName: 'Run cfn_nag on the templates'
 
-- script: |
-    shopt globstar
-    echo "Enabling globstar"
-    shopt -s globstar
-    echo "Enabled"
-    cfn-lint -t $(Build.SourcesDirectory)/templates/*.yaml
+- task: ShellScript@2
+  inputs:
+    scriptPath: $(Build.SourcesDirectory)/build.sh
   displayName: 'Run cfn-lint check'
