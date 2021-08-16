@@ -22,7 +22,7 @@ steps:
 - script: cfn_nag_scan --input-path $(Build.SourcesDirectory)/templates 
   displayName: 'Run cfn_nag on the templates'
 
-- task: ShellScript@2
+- task: Bash@3
   inputs:
     scriptPath: $(Build.SourcesDirectory)/build.sh
   displayName: 'Run cfn-lint check'

@@ -3,4 +3,8 @@
 set -e
 shopt -s globstar
 
-cfn-lint templates/**/*.yaml
+cd templates
+for d in * ; do
+    echo "cfn-lint" $d
+    cfn-lint -t $d
+done
