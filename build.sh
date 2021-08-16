@@ -4,7 +4,7 @@ set -e
 shopt -s globstar
 
 echo "Accessing templates"
-cd $(Build.SourcesDirectory)/templates
+cd templates
 
 echo "Run linting"
 echo "------------"
