@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 set -e
-shopt -s extglob
+shopt -s globstar
 
 cfn-lint templates/**/*.yaml
