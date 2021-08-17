@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
 set -e
-shopt -s globstar
 
 echo "Accessing templates"
 cd templates
 
-echo "Run linting"
-echo "------------"
+c=""
 for d in * ; do
-    echo "cfn-lint" $d
-    cfn-lint -t $d
+    if [[ $d == *.yaml ]]
+    then
+        c+="$d "
+    fi
 done
+
+cfn-lint -t $c
