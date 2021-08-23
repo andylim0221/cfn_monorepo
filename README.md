@@ -1,16 +1,15 @@
 # CloudFormation CI/CD monorepo
 
 Requirements:
-1. Deploy CloudFormation template to an account as CloudFormation stack 
-2. Able to run linting and security check for every template in the repo 
-3. Able to show the log in pipeline 
-5. Create change set during a pull request 
-6. Detect changes in template or somewhere
+1. Deploy CloudFormation stack to an account through automation pipeline
+    - The template will be checked with liniting and security check
+
 
 Packages:
 1. boto3 - AWS SDK API
 2. cfn-lint - AWS linting tool with more verbose and rich functionality
 3. cfn_nag_scan - AWS security check tool 
+
 
 Roadmap:
 - [ ]  Write azure pipeline yaml file to run job
