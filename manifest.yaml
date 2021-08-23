@@ -4,7 +4,7 @@ Stacks:
     LambdaFiles: test # lambda code file if neccessary
     TemplateFile: test # template file
     Parameters: test # parameters file 
-    Region: # region, default us-east-1
+    Region: us-east-1
     Capabilities: # capabilities 
       - CAPABILITY_IAM 
     Tags: #tags  
