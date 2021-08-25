@@ -2,11 +2,11 @@
 Stacks: 
   - StackName: test # stack name 
     LambdaFiles: test # lambda code file if neccessary
-    TemplateFile: test # template file
-    Parameters: test # parameters file 
+    TemplateFile: 'templates/lambda_sample.yaml' # template file
+    Parameters:
+      - EnableProtection: True # parameters file 
     Region: us-east-1
     Capabilities: # capabilities 
       - CAPABILITY_IAM 
-    Tags: #tags  
-      - 
-    Delete: True # delete if this flag exists and set true 
+    Tags: #tags 
+    Delete: True 

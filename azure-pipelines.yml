@@ -23,6 +23,11 @@ steps:
   displayName: 'Run cfn_nag on the templates'
 
 - task: Bash@3
-  inputs:
-    filePath: $(Build.SourcesDirectory)/build.sh
   displayName: 'Run cfn-lint check'
+  inputs:
+    filePath: $(Build.SourcesDirectory)/cfn-lint.sh
+
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'filePath'
+    filePath: $(Build.SourcesDirectory)/manifest.py
