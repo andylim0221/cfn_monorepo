@@ -27,7 +27,5 @@ steps:
   inputs:
     filePath: $(Build.SourcesDirectory)/cfn-lint.sh
 
-- task: PythonScript@0
-  inputs:
-    scriptSource: 'filePath'
-    filePath: $(Build.SourcesDirectory)/manifest.py
+- script: python manifest.py
+  displayName: 'Run deployment'
