@@ -39,7 +39,7 @@ def collect_stack_config(stack):
             tags.append({"Key": key, "Value": stack["Tags"][key]})
     response["Tags"] = tags
 
-    return response
+    return response["Tags"]
 
 
 def handle_stack(stack):
