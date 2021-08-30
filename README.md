@@ -18,7 +18,7 @@ Roadmap:
     - [x] Install python dependencies on the requirements.txt 
     - [x] Run cfn-lint and cfn_nag_scan 
     - [x] Run python script 
-    - [ ] Run deployment only on master/main branch 
+    - [x] Run deployment only on master/main branch 
     - [ ] Create change set during a pull request 
 - [ ] Write python script 
     - [ ] Able to parse manifest yaml file

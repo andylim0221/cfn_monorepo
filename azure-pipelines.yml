@@ -2,6 +2,10 @@ trigger:
   branches:
     include:
       - "*"
+  paths:
+    exclude:
+      - README.md
+      - .gitignore
 
 pool:
   vmImage: ubuntu-latest
