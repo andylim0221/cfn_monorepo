@@ -21,7 +21,7 @@ Roadmap:
     - [x] Run deployment only on master/main branch 
     - [ ] Create change set during a pull request 
 - [ ] Write python script 
-    - [ ] Able to parse manifest yaml file
+    - [x] Able to parse manifest yaml file
     - [ ] Able to able to detect changes by describing_stack and compare with original stack
     - [ ] Able to print events during deployment 
     - [ ] Retrieve deployment status
